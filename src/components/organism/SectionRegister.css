@@ -1,0 +1,13 @@
+#register_form{
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    width: 35%;
+    height: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: #87CEEB;
+    border: 1px solid blue;
+    border-radius: 10px;
+}

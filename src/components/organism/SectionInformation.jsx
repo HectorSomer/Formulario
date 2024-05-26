@@ -1,0 +1,3 @@
+function SectionInformation(){
+    return(<Information)
+}
