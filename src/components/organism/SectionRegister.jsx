@@ -1,11 +1,10 @@
 import Button from "../atoms/Button";
 import Field from "../molecules/Field";
-import Image from "../atoms/Image";
 import "./SectionRegister.css"
-import Title from "../atoms/Title";
 import { useState } from "react";
 import students from "./../../data/students.js"
 import Swal from "sweetalert2";
+import TopSection from "../molecules/SectionImage.jsx";
 function SectionRegister(){
     const [name, setName] = useState('')
     const [correo, setCorreo] = useState('')
@@ -18,7 +17,7 @@ function SectionRegister(){
 
         for (let i = 0; i < students.estudiantes.stick.length; i++) {
             const student = students.estudiantes.stick[i];
-            text += (i+1)+".-"+`Nombre: ${student.nombre}, Email: ${student.email}, Matrícula: ${student.tultion}, Fecha de nacimiento: ${student.birhtdate}\n`;
+            text += `Nombre: ${student.nombre}, Email: ${student.email}, Contraseña: ${student.password}, Matrícula: ${student.tultion}, Fecha de nacimiento: ${student.birhtdate}\n`;
         }
     
         Swal.fire({
@@ -30,8 +29,7 @@ function SectionRegister(){
     return(
        <>
        <div id="register_form">
-        <Image></Image>
-        <Title></Title>
+       <TopSection></TopSection>
         <Field type="text" placeholder="Ejemplo: Héctor Emilio Somer Velázquez" text="Nombre completo del alumno" val={name} fnVal={setName}></Field>
         <Field type="email" placeholder="ejemplo@gmail.com" text="Correo electrónico del alumno" val={correo} fnVal={setCorreo}></Field>
         <Field type="password" placeholder="Contraseña" text="Contraseña del alumno" val={password} fnVal={setPassword}></Field>

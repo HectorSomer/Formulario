@@ -3,6 +3,6 @@ const estudiantes={
 }
    
     function pushStudent(name, correo, password, matricula, date){
-        estudiantes.stick.push({nombre:name, email:correo, contraseña: password, matricula:matricula, Cumpleaños:date})
+        estudiantes.stick.push({nombre:name, email:correo, password: password, tultion:matricula, birhtdate:date})
     }
 export default {pushStudent, estudiantes};
