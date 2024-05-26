@@ -1,5 +1,8 @@
-
-    let stick:[];
+const estudiantes={
+    stick:[],
+}
+   
     function pushStudent(name, correo, password, matricula, date){
-        stick.push({nombre:name, email:correo, password:contrasena, date:})
+        estudiantes.stick.push({nombre:name, email:correo, contraseña: password, matricula:matricula, Cumpleaños:date})
     }
+export default {pushStudent, estudiantes};
