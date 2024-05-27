@@ -13,19 +13,7 @@ function SectionRegister(){
     const [birthdate, setBirthdate] = useState('')
     const handlerClick = (event) => {
         students.pushStudent(name,correo,password,matricula,birthdate);
-        let text = "Estudiantes:\n";
-
-        for (let i = 0; i < students.estudiantes.stick.length; i++) {
-            const student = students.estudiantes.stick[i];
-            text += `Nombre: ${student.nombre}, Email: ${student.email}, Contraseña: ${student.password}, Matrícula: ${student.tultion}, Fecha de nacimiento: ${student.birhtdate}\n`;
-        }
-    
-        Swal.fire({
-            title: "Estudiantes:",
-            text: text
-        });
     }
-
     return(
        <>
        <div id="register_form">
@@ -35,7 +23,7 @@ function SectionRegister(){
         <Field type="password" placeholder="Contraseña" text="Contraseña del alumno" val={password} fnVal={setPassword}></Field>
         <Field type="text" placeholder="Matrícula" text="Matrícula del alumno" val={matricula} fnVal={setMatricula}></Field>
         <Field type="datetime-local" placeholder="00/00/000" text="Fecha de nacimiento" val={birthdate} fnVal={setBirthdate}></Field>
-        <Button onClick={handlerClick}></Button>
+        <Button onClick={handlerClick} text="Registrar"></Button>
        </div>
        </> 
     )

@@ -1,0 +1,11 @@
+#sectionCards_size{
+    width: 35%;
+    height: auto;
+    border: 1px solid black;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+}

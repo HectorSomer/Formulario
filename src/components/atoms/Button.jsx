@@ -15,7 +15,7 @@ box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 `;
 function Button(props){
     return(
-        <ButtonStyled onClick={props.onClick}>Registrar</ButtonStyled>
+        <ButtonStyled onClick={props.onClick}>{props.text}</ButtonStyled>
     )
 }
 export default Button;
